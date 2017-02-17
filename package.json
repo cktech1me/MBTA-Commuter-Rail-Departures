@@ -69,6 +69,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-webpack": "0.0.5",
+    "bower-webpack-plugin": "^0.1.9",
     "core-js": "^2.0.0",
     "csv": "^1.1.1",
     "express": "^4.14.1",
