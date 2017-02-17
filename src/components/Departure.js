@@ -1,6 +1,6 @@
 import React from 'react';
 let _ = require('lodash');
-let moment = require('moment');
+let moment = require('moment-timezone');
 
 class Departure extends React.Component {
     constructor() {

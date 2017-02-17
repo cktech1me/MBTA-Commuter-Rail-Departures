@@ -14,6 +14,15 @@ let config = Object.assign({}, baseConfig, {
     'whatwg-fetch'],
   cache: false,
   devtool: 'sourcemap',
+  devServer: {
+    headers: { "Access-Control-Allow-Origin": "*" },
+    contentBase: './src/',
+    historyApiFallback: true,
+    hot: true,
+    port: defaultSettings.port,
+    publicPath: defaultSettings.publicPath,
+    noInfo: false
+  },  
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({

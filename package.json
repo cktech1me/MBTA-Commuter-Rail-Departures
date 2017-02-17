@@ -12,8 +12,9 @@
     "release:major": "npm version major && npm publish && git push --follow-tags",
     "release:minor": "npm version minor && npm publish && git push --follow-tags",
     "release:patch": "npm version patch && npm publish && git push --follow-tags",
-    "serve": "node server.js --env=dev",
+    "serve:base": "node server.js --env=base",
     "serve:dist": "node server.js --env=dist",
+    "serve": "node server.js --env=dev",
     "start": "node server.js --env=dev",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false"
