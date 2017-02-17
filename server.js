@@ -22,7 +22,7 @@ const backendAPIServerConfig = {
 };
 
 const server = new WebpackDevServer(compiler, Object.assign({}, backendAPIServerConfig, config.devServer))
-  .listen(config.port, 'localhost', (err) => {
+  .listen(process.env.PORT || config.port, 'localhost', (err) => {
     if (err) {
       console.log(err);
     }
