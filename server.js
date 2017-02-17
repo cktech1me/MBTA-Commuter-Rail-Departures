@@ -15,7 +15,7 @@ let isInitialCompilation = true;
 
 const compiler = webpack(config);
 
-const herokuPort = process.env.PORT || config.port;
+const herokuPort = config.port;
 const backendAPIServerConfig = {
   //proxy: {
   //  '*': 'http://localhost:' + (herokuPort + 1) // <- backend
