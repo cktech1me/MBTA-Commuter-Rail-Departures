@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    position: relative;
+}
+
+#app .fixed {
+    margin: 0 auto;
+    top: 0;
+}
+
+#app #menuBoard {
+    position: relative;
+}
+
+#app #departureBoard {
+    position: relative;
+}
