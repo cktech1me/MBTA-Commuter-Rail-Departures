@@ -1,1 +1,1 @@
-web: node server.js --env=dev
+web: node server.js --env=dist
