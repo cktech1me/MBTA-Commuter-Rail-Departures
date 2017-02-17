@@ -18,14 +18,14 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    console.log('App:componentWillMount');
+    // console.log('App:componentWillMount');
     this.setState({
       timeinterval: setInterval(this.renderCurrentTime.bind(this), 1000)
     });
   }
 
   componentDidMount() {
-    console.log('App:componentDidMount');
+    // console.log('App:componentDidMount');
 
     this.setState({
       $currentTime: $('#currentTime')
@@ -33,7 +33,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('App:componentWillUnmount');
+    // console.log('App:componentWillUnmount');
 
     clearInterval(this.state.timeinterval);
 

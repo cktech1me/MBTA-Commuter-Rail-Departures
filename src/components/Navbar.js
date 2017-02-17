@@ -1,6 +1,6 @@
 import React from 'react';
 let _ = require('lodash');
-let $ = require('jquery');
+//let $ = require('jquery');
 
 
 class Navbar extends React.Component {
@@ -9,23 +9,23 @@ class Navbar extends React.Component {
     }
 
     componentWillMount() {
-        console.log('TableHead:componentDidMount');
+        // console.log('TableHead:componentDidMount');
     }
 
     componentDidMount() {
-        console.log('TableHead:componentDidMount');
+        // console.log('TableHead:componentDidMount');
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('TableHead:componentWillReceiveProps');
+        // console.log('TableHead:componentWillReceiveProps');
     }
 
     componentWillUpdate() {
-        console.log('TableHead:componentWillUpdate');
+        // console.log('TableHead:componentWillUpdate');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('TableHead:shouldComponentUpdate');
+        // console.log('TableHead:shouldComponentUpdate');
         return true;
     }
 
@@ -35,7 +35,7 @@ class Navbar extends React.Component {
         }
         event.preventDefault();
         event.stopPropagation();
-        let target = event.target;
+
         this.props.updateState({station: station});
     }
 

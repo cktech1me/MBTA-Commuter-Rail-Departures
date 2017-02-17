@@ -1,13 +1,10 @@
 import React from 'react';
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
+//import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
 let _ = require('lodash');
 let moment = require('moment-timezone');
 import Departure from './Departure';
 import Navbar from './Navbar';
 import { getDepartures } from './Models';
-
-
-let cache = {};
 
 
 class Departures extends React.Component {
@@ -96,29 +93,29 @@ class Departures extends React.Component {
     }
 
     componentWillMount() {
-        console.log('Departures:componentDidMount');
+        // console.log('Departures:componentDidMount');
         this.fetchData();
     }
 
     componentDidMount() {
-        console.log('Departures:componentDidMount');
+        // console.log('Departures:componentDidMount');
         //this.fetchData();
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('Departures:componentWillReceiveProps');
+        // console.log('Departures:componentWillReceiveProps');
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('Departures:componentDidUpdate');
+        // console.log('Departures:componentDidUpdate');
     }
 
     componentWillUpdate(nextProps, nextState) {
-        console.log('Departures:componentWillUpdate');
+        // console.log('Departures:componentWillUpdate');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('Departures:shouldComponentUpdate');
+        // console.log('Departures:shouldComponentUpdate');
         return true;
     }
 
@@ -152,7 +149,7 @@ class Departures extends React.Component {
                         return true;
                     }
                 })
-            };
+            }
 
             departures = _.sortBy(departures, [(departure) => {
                 let scheduledTime = parseInt(departure[that.state.columnNameIndexMapping['ScheduledTime']]);
@@ -219,7 +216,7 @@ Departures.defaultProps = {
         'Departing soon': 'btn-primary',
         'Delayed': 'btn-warning',
         'Cancelled': 'btn-danger',
-        "Departed": 'btn-success'
+        'Departed': 'btn-success'
     },
     columnsToBeSkipped: ['TimeStamp'],
     sourceStations: ['North Station', 'South Station'],

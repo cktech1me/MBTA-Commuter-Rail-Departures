@@ -1,4 +1,5 @@
 import React from 'react';
+let _ = require('lodash');
 let moment = require('moment');
 
 class Departure extends React.Component {
@@ -7,23 +8,23 @@ class Departure extends React.Component {
     }
 
     componentWillMount() {
-        console.log('Departure:componentDidMount');
+        // console.log('Departure:componentDidMount');
     }
 
     componentDidMount() {
-        console.log('Departure:componentDidMount');
+        // console.log('Departure:componentDidMount');
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('Departure:componentWillReceiveProps');
+        // console.log('Departure:componentWillReceiveProps');
     }
 
     componentWillUpdate() {
-        console.log('Departure:componentWillUpdate');
+        // console.log('Departure:componentWillUpdate');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('Departure:shouldComponentUpdate');
+        // console.log('Departure:shouldComponentUpdate');
         return true;
     }
 
@@ -38,7 +39,7 @@ class Departure extends React.Component {
                 let key = departure[that.props.columnNameIndexMapping[that.props.departureKeyField]] + '_' + index;
 
                 if (_.includes(that.props.indexesToBeSkipped, index)) {
-                    let lastUpdatedTime = moment.tz(parseInt(value), that.props.momentTimezone).format('dddd, MMMM Do YYYY, h:mm:ss a');
+                    //let lastUpdatedTime = moment.tz(parseInt(value), that.props.momentTimezone).format('dddd, MMMM Do YYYY, h:mm:ss a');
                     return null;
                 } else if (indexColumnNameMapping[index] == 'ScheduledTime') {
                     return <td key={key}>{moment.tz(parseInt(value), that.props.momentTimezone).format('h:m:s a')} </td>

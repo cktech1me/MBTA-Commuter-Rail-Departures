@@ -1,7 +1,7 @@
 import CSV from 'csv';
-require("whatwg-fetch");
-let _ = require('lodash');
-let $ = require('jquery');
+require('whatwg-fetch');
+//let _ = require('lodash');
+//let $ = require('jquery');
 
 
 //import Faker from 'faker';
@@ -23,15 +23,15 @@ function csvParser(csvData, callback) {
                 process.stdout.write(data);
             });
         }); */
-        let names = data.slice(0, 1)[0];
-        let departures = data.slice(1);
+        names = data.slice(0, 1)[0];
+        departures = data.slice(1);
         callback({names: names, departures: departures});
     });
-};
+}
 
 function csvError(error) {
-    console.log('Parsing failed', error);
-};
+    // console.log('Parsing failed', error);
+}
 
 function getDepartures(callback) {
     function fetchCallback(response) {
@@ -80,6 +80,6 @@ function getDepartures(callback) {
         //credentials: 'include'
     }).then(fetchCallback)
     .catch(csvError);
-};
+}
 
 module.exports = { getDepartures: getDepartures };
