@@ -83,6 +83,7 @@
     "serve-static": "^1.11.2",
     "socket.io": "^1.7.3",
     "sort-by": "^1.2.0",
+    "webpack": "^1.14.0",
     "whatwg-fetch": "^2.0.2"
   }
 }
