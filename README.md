@@ -1,5 +1,6 @@
 # MBTA-Commuter-Rail-Departures
-The is a simple React.js implementation of the MBTA Commuter Rail Departures schedule.
+The is a simple test webpage of the MBTA Commuter Rail Departures schedule.
+It is implemented in pure React.js, no Redux.
 
 Instructions:
 1) Download or clone the repository to your local computer.
